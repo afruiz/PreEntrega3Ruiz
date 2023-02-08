@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.contenedor_actividades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor_destinos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box_pasajeros{
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 50px;
+}
+
