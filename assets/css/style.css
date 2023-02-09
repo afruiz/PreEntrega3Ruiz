@@ -21,3 +21,23 @@
     width: 50px;
 }
 
+.card{
+    margin: 16px;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    padding: 20px;
+    border: solid black 2px;
+    border-radius: 10px;
+}

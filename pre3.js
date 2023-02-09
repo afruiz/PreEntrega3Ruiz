@@ -28,7 +28,7 @@ function cotizarVuelo(){
         div_error.style.display = "flex";
         div_error.style.justifyContent = "center";
         div_error.innerHTML =  `<h2>Los aeropuertos de salida y llegada son iguales.</h2>
-                                <a href="form.html">Volver</a>`;
+                                <a href="index.html">Volver</a>`;
         contenedor_error.append(div_error);
     }
 
