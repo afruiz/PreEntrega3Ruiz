@@ -1,4 +1,5 @@
-
+//SEETALERT EN EL ERROR DE AEROPUERTOS
+//STORAGE EN EL COTIZADOR DE VUELO
 
 
 let btn_cotizar = document.getElementById("btn_cotizar");
@@ -29,34 +30,18 @@ function cotizarVuelo(){
         div_error.style.justifyContent = "center";
         div_error.innerHTML =  `<h2>Los aeropuertos de salida y llegada son iguales.</h2>
                                 <a href="index.html">Volver</a>`;
-        contenedor_error.append(div_error);
     }
-
     else{
-        function cotizar(cotizacion){
-
-            let {salida , llegada , categoria} = cotizacion;
-            let precio = 40000;
+    let precio = 10000;
+    precio = Number(fee_salida(salida) * precio);
+    precio = Number(precio + fee_llegada(llegada) * precio);
+    let costo_categoria = obtener_categoria(categoria);      
+    precio = Number( precio + costo_categoria * precio);    
         
-            precio = fee_salida(salida)*precio;
-            precio = fee_llegada(llegada)*precio;
-        
-            let costo_categoria = obtener_categoria(categoria);
-            
-            precio = parseFloat(costo_categoria*precio).toFixed(2);
-        
-            let precioVuelo = cotizar(cotizacion);
-
-            return precio;
-            
-        }
-        
-        let div_resultado = document.getElementById("contenedor_resultado");  
-        div_resultado.innerHTML = `<h2>El precio de su vuelo es de  por persona.</h2>
-                                   <a href="./pages/reservas.html">Reservar Vuelo<a/>`; 
-                                   //AL INTERPOLAR CON ${precio}, DEJA DE APARECER TODO EL innerHTML
-        contenedor_resultado.append(div_resultado);
-        
+    let div_resultado = document.getElementById("contenedor_resultado");  
+    div_resultado.innerHTML = `<h2>El precio de su vuelo es de ${precio} por persona.</h2>
+                                <a href="./pages/reservas.html">Reservar Vuelo<a/>
+                                <a href="./index.html">Cotizar otro vuelo<a/>`; 
     }
 }
 
@@ -65,9 +50,9 @@ function fee_salida(salida){
     let costo_salida;
 
     switch(salida){
-        case 'bariloche' : costo_salida = 1.7; break;
-        case 'buenos aires' : costo_salida = 1.3; break;
-        case 'tucuman' : costo_salida = 1.4; break;
+        case 'bariloche' : costo_salida = 1.9; break;
+        case 'buenos aires' : costo_salida = 1.1; break;
+        case 'tucuman' : costo_salida = 1.8; break;
     }
     return costo_salida;
 }
@@ -77,9 +62,9 @@ function fee_llegada(llegada){
     let costo_llegada;
 
     switch(llegada){
-        case 'bariloche' : costo_llegada = 1.35;
-        case 'buenos aires' : costo_llegada = 1.15
-        case 'tucuman' : costo_llegada = 1.2;
+        case 'bariloche' : costo_llegada = 1.6;
+        case 'buenos aires' : costo_llegada = 1.2;
+        case 'tucuman' : costo_llegada = 1.9;
     }
     return costo_llegada;
 }
@@ -87,7 +72,6 @@ function fee_llegada(llegada){
 function obtener_categoria(categoria){
 
     return (categoria === 'turista')?1.2:1.9;
-
 }
 
 
