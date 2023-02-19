@@ -1,5 +1,5 @@
-//SEETALERT EN EL ERROR DE AEROPUERTOS
-//STORAGE EN EL COTIZADOR DE VUELO
+
+//FETCH ---> INSERTAR WEATHER MAP DE LAS CIUDADES EN OPENWEATHERMAP.ORG + GEOLOCALIZACION
 
 
 let btn_cotizar = document.getElementById("btn_cotizar");
@@ -23,13 +23,13 @@ function cotizarVuelo(){
     }
 
     if(salida == llegada){
-        let div_error = document.getElementById("contenedor_error");
-        div_error.style.backgroundColor = "red";
-        div_error.style.color = "white";
-        div_error.style.display = "flex";
-        div_error.style.justifyContent = "center";
-        div_error.innerHTML =  `<h2>Los aeropuertos de salida y llegada son iguales.</h2>
-                                <a href="index.html">Volver</a>`;
+        Swal.fire({
+            icon: 'error',
+            title: 'ERROR',
+            text: 'Los aeropuertos de salida y llegada son iguales.',
+            footer: '<a href="./index.html">Volver</a>'
+          })
+          
     }
     else{
     let precio = 10000;
@@ -42,6 +42,12 @@ function cotizarVuelo(){
     div_resultado.innerHTML = `<h2>El precio de su vuelo es de ${precio} por persona.</h2>
                                 <a href="./pages/reservas.html">Reservar Vuelo<a/>
                                 <a href="./index.html">Cotizar otro vuelo<a/>`; 
+
+    
+    localStorage.setItem("salida" , salida);
+    localStorage.setItem("llegada" , llegada);
+    localStorage.setItem("categoria" , categoria);
+    localStorage.setItem("precio" , precio);
     }
 }
 
@@ -76,3 +82,5 @@ function obtener_categoria(categoria){
 
 
 
+
+  

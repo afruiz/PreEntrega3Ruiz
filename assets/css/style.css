@@ -41,3 +41,8 @@ form{
     border: solid black 2px;
     border-radius: 10px;
 }
+
+.card-img{
+    width: 200px;
+    height: 200px;
+}
