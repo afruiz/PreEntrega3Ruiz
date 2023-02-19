@@ -39,9 +39,9 @@ function cotizarVuelo(){
     precio = Number( precio + costo_categoria * precio);    
         
     let div_resultado = document.getElementById("contenedor_resultado");  
-    div_resultado.innerHTML = `<h2>El precio de su vuelo es de ${precio} por persona.</h2>
-                                <a href="./pages/reservas.html">Reservar Vuelo<a/>
-                                <a href="./index.html">Cotizar otro vuelo<a/>`; 
+    div_resultado.innerHTML = `<h2 class="link">El precio de su vuelo es de ${precio} por persona.</h2>
+                                <a class="link" href="./pages/reservas.html">Reservar Vuelo<a/>
+                                <a class="link" href="./index.html">Cotizar otro vuelo<a/>`; 
 
     
     localStorage.setItem("salida" , salida);

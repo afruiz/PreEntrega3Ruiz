@@ -3,6 +3,14 @@
     padding:0;
 }
 
+header{
+    background-color: #F1F5FE;
+}
+
+main{
+    background-color: #F1F5FE;
+}
+
 .contenedor_actividades{
     display: flex;
     flex-direction: row;
@@ -23,7 +31,10 @@
 
 .card{
     margin: 16px;
+}
 
+.card-body{
+    background-color: #F1F5FE;
 }
 
 h1{
@@ -37,12 +48,34 @@ h2{
 }
 
 form{
-    padding: 20px;
-    border: solid black 2px;
-    border-radius: 10px;
+
+    padding: 80px;
+    background-color: #F1F5FE;
 }
 
 .card-img{
     width: 200px;
     height: 200px;
+}
+
+.div_img{
+    text-align: center;
+}
+
+.div_dest{
+    border-radius: 20px;
+}
+
+.dest_img{
+    width: auto;
+    height: 400px;
+}
+
+.link{
+    margin: 20px;
+    background-color: #F1F5FE;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
 }
