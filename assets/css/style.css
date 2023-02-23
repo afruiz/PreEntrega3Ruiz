@@ -73,11 +73,11 @@ form{
 
 .link{
     margin: 20px;
-    background-color: blue;
+    background-color: black;
     color: white;
     text-decoration: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .div_apis{
