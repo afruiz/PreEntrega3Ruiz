@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="navegador navbar navbar-expand-lg bg-body-tertiary">
+<body class="body">
+    <header>
+
+    </header>
+    <nav class="navegador navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"><img src="" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +37,8 @@
             </div>
         </div>
     </nav>
-    <header>
-        <h1 class="">Recorre Argentina con Aerolineas Condor</h1>
+    <main>
+      <h1 class="m-3">Recorre Argentina con Aerolíneas Cóndor</h1>
         <div id="carouselExampleCaptions" class="carousel slide container">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,8 +71,8 @@
               <span class="visually-hidden">Anterior</span>
             </button>
         </div>
-    </header>
-    <main>
+        <br>
+        <br>
         <form class="container">
           <fieldset>
             <legend>Cotiza tu vuelo</legend>
@@ -79,7 +82,7 @@
                   <option value="">---Seleccione---</option>
                   <option value="bariloche">BARILOCHE</option>
                   <option value="buenos aires">BUENOS AIRES</option>
-                  <option value="tucuman">TUCUMAN</option>
+                  <option value="tucuman">TUCUMÁN</option>
               </select>
             </div>
             <div class="mb-3">
@@ -88,11 +91,11 @@
                   <option value="">---Seleccione---</option>
                   <option value="bariloche">BARILOCHE</option>
                   <option value="buenos aires">BUENOS AIRES</option>
-                  <option value="tucuman">TUCUMAN</option>
+                  <option value="tucuman">TUCUMÁN</option>
               </select>
             </div>
             <div class="m-2">
-              <label for="categoria"> Categoria</label>
+              <label for="categoria"> Categoría</label>
               <input type="radio" name="categoria" value="turista" id="turista" class="radio" checked>Turista
               <input type="radio" name="categoria" value="business" id="business" class="radio">Business
             </div>
@@ -103,7 +106,13 @@
           <div id="error_cont"></div>
         </div>
         <div class="resultado container" id="contenedor_resultado"></div>
-
+        <br>
+        <br>
+        <div class="div_apis container">
+          <div id="div_api"></div>
+          <div id="div_api_dos"></div>
+          <div id="div_api_tres"></div>
+        </div>
         <h2 class="mt-5 mb-3">Disfruta las mejores actividades</h2>
         <div class="contenedor_actividades container">
             <div class="card" style="width: 18rem;">
@@ -125,7 +134,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="./assets/src/img/esqui.jpeg" class="card-img" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Esqui en Cerro Catedral</h5>
+                  <h5 class="card-title">Esquí en Cerro Catedral</h5>
                   <p class="card-text">Es el centro de esquí más grande del hemisferio sur y ofrece una amplia infraestructura de servicios para la práctica de deportes invernales.</p>
                   <a href="./pages/actividades.html" class="btn btn-primary">Saber Más</a>
                 </div>
@@ -133,7 +142,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="./assets/src/img/tafi.jpg" class="card-img" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Excursion a Tafi del Valle</h5>
+                  <h5 class="card-title">Excursión a Tafí del Valle</h5>
                   <p class="card-text">Tomamos la ruta 307 para realizar el ascenso a los Valles, mientras nos internamos en la Quebrada del río Los Sosa, parte de la Reserva Natural del mismo nombre. </p>
                   <a href="./pages/actividades.html" class="btn btn-primary">Saber Más</a>
                 </div>

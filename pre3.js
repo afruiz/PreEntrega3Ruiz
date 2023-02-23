@@ -80,7 +80,40 @@ function obtener_categoria(categoria){
     return (categoria === 'turista')?1.2:1.9;
 }
 
+let key = "285c9cbf11b1bcb416c5ddaf116caf2d";
+let contenedor_api = document.getElementById("div_api");
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&units=metric&lang=es&appid="+key)
+    .then(response => response.json())
+    .then(data => {
+        contenedor_api.innerHTML = `<h3>Buenos Aires:</h3>
+                                    <p>Temperatura: ${data.main.temp}°C</p>
+                                    <p>Sensación térmica: ${data.main.feels_like}°C</p>
+                                    <p>Humedad: ${data.main.humidity}%</p>
+                                    <p>Viento: ${data.wind.speed} km/h</p>
+                                    <p>${data.weather[0].description}</p>`
+    })
 
+let contenedor_api_dos = document.getElementById("div_api_dos");
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Bariloche&units=metric&lang=es&appid="+key)
+    .then(response => response.json())
+    .then(data => {
+        contenedor_api_dos.innerHTML = `<h3>Bariloche:</h3>
+                                    <p>Temperatura: ${data.main.temp}°C</p>
+                                    <p>Sensación térmica: ${data.main.feels_like}°C</p>
+                                    <p>Humedad: ${data.main.humidity}%</p>
+                                    <p>Viento: ${data.wind.speed} km/h</p>
+                                    <p>${data.weather[0].description}</p>`
+    })
 
-
+let contenedor_api_tres = document.getElementById("div_api_tres");
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Tucuman&units=metric&lang=es&appid="+key)
+    .then(response => response.json())
+    .then(data => {
+            contenedor_api_tres.innerHTML = `<h3>Tucumán:</h3>
+                                        <p>Temperatura: ${data.main.temp}°C</p>
+                                        <p>Sensación térmica: ${data.main.feels_like}°C</p>
+                                        <p>Humedad: ${data.main.humidity}%</p>
+                                        <p>Viento: ${data.wind.speed} km/h</p>
+                                        <p>${data.weather[0].description}</p>`
+    })
   
